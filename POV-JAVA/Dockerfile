@@ -5,11 +5,7 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Install Maven
-RUN apt-get update && apt-get install -y maven
 
-# Run the Maven build
-RUN mvn clean install
 
 # Copy the built JAR file
 COPY target/Point-of-sale-0.0.1-SNAPSHOT.jar .
